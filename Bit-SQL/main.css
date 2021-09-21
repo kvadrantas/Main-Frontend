@@ -17,12 +17,21 @@ body {
     background-color: #f8f8eb;
     border-radius: 3px;
     font-size: 15px;
-    padding: 13px 10px 13px 10px;
     margin-bottom: 7px;
 }
 
 .left-pane a {
+    display: block;
+    border: 1px solid transparent;
     text-decoration: none;
+    color: #512b2b;
+    padding: 5px 10px 5px 10px;
+    transition: background-color .1s ease-out;
+}
+
+.left-pane a:hover {
+    background-color: rgba(0, 0, 0, 0.411);
+    border: 1px solid #dbd8bc;
 }
 
 .right-pane {

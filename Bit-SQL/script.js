@@ -50,7 +50,7 @@ setTimeout(() => {
     const fileLinks = document.querySelectorAll('.left-pane a');
     for (const link of fileLinks) {
         link.addEventListener('click', () => {
-            renderFileContent(link.innerHTML);
+            renderFileContent(link.id);
         });
     }
     body.classList.add('animation');
@@ -62,10 +62,10 @@ try {
     if (files.ok) {
         files = await files.json();
         files.forEach(async(element, index) => {
-            files[index] = `<a id="${element}" href="#">${element}</a>`;
+            files[index] = `<a id="${element}" href="#">${element.slice(0, -4).replace('-', '. ').replaceAll('-', ' ').replaceAll('_', ', ')}</a>`;
             // console.log(index, element);
         });
-        files = files.join('<br>');
+        files = files.join('');
         // console.log('aaa ', files);
         // files = files.join('<br>');
     }
