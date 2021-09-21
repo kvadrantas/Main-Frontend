@@ -38,7 +38,7 @@ async function renderFileContent(fileName) {
     }
 
     setTimeout(() => {
-        document.querySelector('.right-pane').innerHTML = `${fileContent.replaceAll('--', '')}`;
+        document.querySelector('.right-pane').innerHTML = `${fileContent.replaceAll('-- ', '')}`;
  
         body.classList.add('animation');
         content.classList.remove('hide');
