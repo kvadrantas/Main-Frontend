@@ -1,3 +1,4 @@
+const navigation = document.querySelector('.navigation');
 const body = document.getElementById('body');
 const checkbox1 = document.getElementById('checkbox1');
 const checkbox2 = document.getElementById('checkbox2');
@@ -7,6 +8,7 @@ const button = document.getElementById('button');
 
 let fileContent;
 let files;
+let folders;
 
 // row.classList.add('hide');
 // content.classList.add('hide');
@@ -25,6 +27,42 @@ let files;
 //     }
 // });
 
+async function renderFiles(folder) {
+    // console.log('render files ', folder);
+    try {
+        files = await fetch(`https://rolandasseputis.lt:3344/Bit-SQL/json/files:${folder}`);
+        if (files.ok) {
+            files = await files.json();
+            files.forEach(async(element, index) => {
+                files[index] = `<a id="${element}">${element.slice(0, element.search(/\./)).replace('-', '. ').replaceAll('-', ' ').replaceAll('_', ', ')}</a>`;
+                // console.log(index, element, element.search(/\./));
+            });
+            files = files.join('');
+            // console.log('aaa ', files);
+            // files = files.join('<br>');
+        }
+    }
+    catch(error) {
+        console.log('KLAIDA: ', error);
+    }
+
+    setTimeout(() => {
+        document.querySelector('.left-pane').innerHTML = `${files}`;
+        const fileLinks = document.querySelectorAll('.left-pane a');
+        for (const link of fileLinks) {
+            link.addEventListener('click', () => {
+                fileLinks.forEach((element, index) => {
+                    element.classList.remove('active-left-nav');
+                });
+                link.classList.add('active-left-nav');
+                renderFileContent(link.id);
+            });
+        }
+        body.classList.add('animation');
+        content.classList.remove('hide');
+    }, 300);
+};
+
 async function renderFileContent(fileName) {
     try {
         fileContent = await fetch(`https://rolandasseputis.lt:3344/Bit-SQL/json/fileContent:${fileName}`);
@@ -42,37 +80,35 @@ async function renderFileContent(fileName) {
  
         body.classList.add('animation');
         content.classList.remove('hide');
-    }, 200);
+    }, 300);
 }
 
-setTimeout(() => {
-    document.querySelector('.left-pane').innerHTML = `${files}`;
-    const fileLinks = document.querySelectorAll('.left-pane a');
-    for (const link of fileLinks) {
-        link.addEventListener('click', () => {
-            renderFileContent(link.id);
-        });
-    }
-    body.classList.add('animation');
-    content.classList.remove('hide');
-}, 200);
+
+
+
 
 try {
-    files = await fetch('https://rolandasseputis.lt:3344/Bit-SQL/json/files');
-    if (files.ok) {
-        files = await files.json();
-        files.forEach(async(element, index) => {
-            files[index] = `<a id="${element}" href="#">${element.slice(0, -4).replace('-', '. ').replaceAll('-', ' ').replaceAll('_', ', ')}</a>`;
-            // console.log(index, element);
+    folders = await fetch('https://rolandasseputis.lt:3344/Bit-SQL/json/folders');
+    if (folders.ok) {
+        folders = await folders.json();
+        folders.forEach((element, index) => {
+            navigation.innerHTML += `<button id="${element}">${element}</button>`;
         });
-        files = files.join('');
-        // console.log('aaa ', files);
-        // files = files.join('<br>');
     }
 }
 catch(error) {
     console.log('KLAIDA: ', error);
 }
 
-renderFileContent('nd2.sql');
+// renderFileContent('nd2.sql');
 
+navigation.querySelectorAll('button').forEach((element, index) => {
+    element.addEventListener('click', () => {
+        // console.log('clicked ', element.id);
+        navigation.querySelectorAll('button').forEach((element, index) => {
+            element.classList.remove('active-top-nav');
+        });
+        element.classList.add('active-top-nav');
+        renderFiles(element.id);
+    });
+});

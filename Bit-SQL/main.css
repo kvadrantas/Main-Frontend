@@ -9,8 +9,26 @@ body {
     margin-left: 5%;
 }
 
+.navigation {
+    text-align: left;
+    display: block;
+}
+
+h1 {
+    text-align: left;
+    display: block;
+    font-size: 38.5px;
+    color: #f35b1c;
+    font-weight: 400;
+    font-style: italic;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
 .left-pane {
     float: left;
+    min-height: 400px;
     width: 30%;
     text-align: left;
     border: 1px solid #dbd8bc;
@@ -34,8 +52,14 @@ body {
     border: 1px solid #dbd8bc;
 }
 
+.active-left-nav {
+    background-color: rgba(0, 0, 0, 0.411);
+    border: 1px solid #dbd8bc;
+}
+
 .right-pane {
     text-align: left;
+    min-height: 380px;
     float: right;
     width: 62%;
     border: 1px solid #bcd8db;
@@ -64,8 +88,9 @@ body {
 }
 
 button {
-    margin-top: 20px;
-    margin-bottom: 60px;
+    /* float: left; */
+    margin-top: 12px;
+    margin-bottom: 3px;
     height: 45px;
     font: 15px/1 Helvetica, Arial, sans-serif;
     color: #512b2b;
@@ -78,6 +103,10 @@ button {
 }
 
 button:hover {
+    background-color: #fdc129;
+}
+
+.active-top-nav {
     background-color: #fdc129;
 }
 
