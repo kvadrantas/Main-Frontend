@@ -29,6 +29,7 @@ h1 {
 .left-pane {
     float: left;
     min-height: 400px;
+    max-height: calc(100vh - 205px);
     width: 30%;
     text-align: left;
     border: 1px solid #dbd8bc;
@@ -36,6 +37,7 @@ h1 {
     border-radius: 3px;
     font-size: 15px;
     margin-bottom: 7px;
+    overflow-y: scroll;
 }
 
 .left-pane a {
@@ -60,6 +62,8 @@ h1 {
 .right-pane {
     text-align: left;
     min-height: 380px;
+    max-height: calc(100vh - 230px);
+    overflow-y: scroll;
     float: right;
     width: 62%;
     border: 1px solid #bcd8db;
