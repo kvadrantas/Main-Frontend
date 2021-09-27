@@ -1,0 +1,189 @@
+.about-me .mainTitleBlock{
+  text-align: left;
+}
+
+.about-me {
+  display: inline-block;
+  width: 68%;
+  height: 100%;
+  margin-left: 16%;
+  margin-right: 16%;
+  margin-bottom: 50px;
+}
+
+.about-me > .left-column > img {
+  width: 100%;
+  border: 8px solid #f4f5f8;
+  border-radius: 6px;
+}
+
+.about-me .right-column {
+  float: right;
+  width: 53%;
+}
+
+.about-me .left-column {
+  float: left;
+  width: 41%;
+}
+
+.about-me > .right-column > p {
+  font: 16px Roboto, sans-serif;
+  line-height: 1.857em;
+  border-bottom: 1px solid var(--background);
+  padding-bottom: 22px;
+  color: var(--paragraph);
+  margin-bottom: 10px;
+}
+
+.about-me > .right-column > a {
+}
+.about-me > .right-column > h2 {
+  font: 32px Montserrat, sans-serif;
+  border-bottom: 1px solid var(--paragraph2);
+  width: 60%;
+  margin-bottom: 50px;
+}
+.about-me > .right-column > h2 > span {
+  color: var(--primary);
+  position: relative;
+  font: 32px Montserrat, sans-serif;
+}
+.about-me > .right-column > h2 > span::before {
+  content: "";
+  display: inline-block;
+  width: 60px;
+  height: 1px;
+  bottom: 0px;
+  position: absolute;
+  background-color: var(--primary);
+}
+.about-me > .right-column > h3 {
+  text-transform: uppercase;
+  font: 19.2px Montserrat, sans-serif;
+  margin-bottom: 12px;
+}
+.about-me > .right-column > .personal-list {
+  /* flex-direction: row;
+  display: flex; */
+}
+
+.about-me .right-column .personal-list .ul-left {
+  float: left;
+  width: 40%;
+}
+.about-me .right-column .personal-list .ul-right {
+  float: left;
+  width: 60%;
+}
+
+.about-me li p {
+  float: left;
+  margin-right: 10px;
+}
+
+.about-me li {
+  margin-bottom: 16px;
+}
+
+.about-me > .right-column > .personal-list > ul {
+  padding-left: 0;
+  padding-right: 15px;
+  width: 50%;
+}
+.about-me > .right-column > .personal-list > ul > li > p {
+  display: inline-block;
+}
+.about-me > .right-column > .personal-list > ul > li {
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+.about-me ul,
+.about-me li {
+  list-style-type: none;
+}
+
+.about-me .aboutme-label {
+  text-transform: uppercase;
+}
+
+.about-me .aboutme-value {
+  color: var(--paragraph);
+}
+
+@media (max-width: 990px) {
+  .about-me .left-column {
+    width: 50%;
+  }
+
+  .about-me .right-column {
+    width: 40%;
+  }
+
+  .about-me {
+    width: 77%;
+    margin-left: 12%;
+    margin-right: 11%;
+  }
+}
+
+.about-me .new-per-button {
+  margin-right: 12px;
+  margin-top: 8px;
+}
+
+@media (max-width: 770px) {
+  .about-me .left-column {
+    width: 96%;
+    margin-bottom: 50px;
+  }
+
+  .about-me .right-column {
+    float: left;
+    width: 89%;
+  }
+}
+
+@media (max-width: 575px) {
+  .about-me .left-column {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+
+  .about-me .right-column {
+    float: left;
+    width: 95%;
+    padding-left: 15px;
+  }
+  .about-me {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .about-me > .right-column > .personal-list {
+    display: inline-block;
+  }
+
+  .about-me li p {
+    float: left;
+  }
+
+  .about-me li {
+    margin-bottom: 16px;
+  }
+
+  .about-me .aboutme-label {
+  }
+
+  .about-me .aboutme-value {
+    margin-left: 16px;
+  }
+
+  .about-me .right-column .personal-list .ul-left {
+    width: 100%;
+  }
+  .about-me .right-column .personal-list .ul-right {
+    width: 100%;
+  }
+}

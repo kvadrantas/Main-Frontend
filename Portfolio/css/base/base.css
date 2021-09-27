@@ -1,0 +1,9 @@
+.main-row {
+    display: inline-block;
+    width: 78%;
+    /* position: absolute; */
+    /* left: 50%; */
+    /* transform: translate(-50%, 0); */
+    margin-left: 11%;
+    margin-right: 11%;
+}

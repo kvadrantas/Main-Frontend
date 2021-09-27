@@ -1,0 +1,219 @@
+.my-portfolio .row {
+    /* display: flex;
+    flex-wrap: wrap; */  
+}
+
+.my-portfolio .gallery-navigation {
+    margin-top: 30px;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.my-portfolio .gallery-navigation a {
+    position: relative;
+    text-decoration: none;
+    margin: 0px 10px;
+    padding: 5px 5px;
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: var(--paragraph);
+    cursor: pointer;
+    font: 400 13.3333px Arial;
+}
+
+.my-portfolio .gallery-navigation .active {
+    color: var(--primary);
+}
+
+.my-portfolio .gallery-navigation .active::after {
+    position: absolute;
+    top: 25px;
+    left: 45%;
+    content: '';
+    display: inline-block;
+    height: 3px;
+    width: 3px;
+    border-radius: 50%;
+    background-color: var(--primary);
+}
+
+.my-portfolio .gallery-navigation a:hover::after {
+    position: absolute;
+    top: 25px;
+    left: 45%;
+    content: '';
+    display: inline-block;
+    height: 3px;
+    width: 3px;
+    border-radius: 50%;
+    background-color: var(--primary);
+}
+
+.my-portfolio .gallery {
+}
+
+.my-portfolio .gallery-overlay1 {
+    overflow: hidden;
+    display: inline-block;
+    position: absolute;
+    top: 8px;
+    bottom: 8px;
+    left: 8px;
+    right: 8px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #f7f7f7;
+    opacity: 0;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+}
+
+.my-portfolio .gallery-overlay2 {
+    /* overflow: hidden; */
+    display: inline-block;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    opacity: 0;
+    text-align: center;
+    /* animation: overlay2-animation 1.1s infinite;
+    animation-play-state: paused;  */
+    /* animation-direction: reverse; */
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+}
+
+.my-portfolio .gallery-overlay3 {
+    position: absolute;
+    top: 0px;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #9c27b0;
+    background: rgba(0, 0, 0, 0.1);
+    transform: skewX(45deg);
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+}
+
+.playforward1 {
+    animation-name: overlay1-animation; 
+}
+
+.playforward2 {
+    animation-name: overlay2-animation; 
+}
+
+.playforward3 {
+    animation-name: overlay3-animation; 
+}
+
+.playbackward {
+    animation-direction: reverse;
+}
+
+@keyframes overlay1-animation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes overlay2-animation {
+    0% {
+        opacity: 0;
+        top: 100px;
+    }
+    70% {
+        opacity: .5;
+    }
+    100% {
+        top: 8px;
+        opacity: 1;
+    }
+}
+
+@keyframes overlay3-animation {
+    0% {
+        left: 160%;
+    }
+    100% {
+        left: -160%;
+    }
+}
+
+.my-portfolio .gallery-photo {
+    position: relative;
+    width: 32%;
+    display: inline-block;
+    margin: 5px 3px;
+    transform: scale(0);
+}
+
+.my-portfolio .gallery-photo2 {
+    position: relative;
+    width: 32%;
+    display: inline-block;
+    margin: 5px 3px;
+    transform: scale(1);
+    transition: transform .7s;
+}
+
+.my-portfolio .gallery-photo img{
+    width: 100%;
+    border-radius: 4px;
+}
+
+.my-portfolio .photo-title {
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 68px;
+    margin-bottom: 25px;
+    color: #111;
+    font-weight: 900;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+}
+
+.my-portfolio .gallery-icon {
+    color: var(--primary);
+    font-size: 18px;
+    text-align: center;
+    margin: 16px;
+}
+
+@media (max-width: 875px) {
+    .my-portfolio .gallery-photo {
+        width: 31.5%;
+    }
+}
+
+@media (max-width: 770px) {
+    .my-portfolio .gallery-photo {
+        width: 48%;
+    }
+    .my-portfolio .main-row {
+        /* margin-left: 8%; */
+    }
+}
+
+@media (max-width: 575px) {
+    .my-portfolio .gallery-photo {
+        display: block;
+        width: 100%;
+        height: 100%;
+        margin-bottom: 20px;
+    }
+
+    .my-portfolio .main-row {
+        width: 100%;
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+}
+
+/* 770 - 875 */
+/* 875 -> 3 */

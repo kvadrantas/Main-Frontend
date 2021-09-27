@@ -1,0 +1,77 @@
+/* base */
+@import "./base/reset.css";
+@import "./base/variables.css";
+@import "./base/layout.css";
+@import "./base/base.css";
+
+/* 3rd-party */
+@import "./3rd-party/fontawesome.min.css";
+
+/* Text Fonts */
+@import "../fonts/text-fonts/text-fonts.css";
+
+/* components */
+@import "./components/about-me.css";
+@import "./components/testimonial.css";
+@import './components/button.css';
+@import './components/footer.css';
+@import './components/header.css';
+@import './components/skills.css';
+@import "./components/blog.css";
+@import "./components/main-tittles.css";
+@import "./components/counter.css";
+@import "./components/portfolio.css";
+
+
+
+
+/* CUSTOM PAGE STYLE BELOW THIS COMMENT LINE */
+
+/***************************/
+/* CUSTOM STYLE*/
+/***************************/
+
+section {
+  padding: 50px 0;
+  overflow: hidden;
+}
+
+/* ------------------------------------------------------ */
+
+/* SECTION ABOUT ME */
+
+/* SECTION MY SKILLS */
+.my-skills {
+}
+
+/* SECTION MY RESUME */
+.my-resume {
+}
+
+/* SECTION COUNTER */
+.counter {
+}
+
+/* SECTION MY SERVICES */
+.my-services {
+}
+
+/* SECTION MY PORTFOLIO */
+.my-portfolio {
+}
+
+/* SECTION MY TESTIMONIALS */
+.testimonial {
+}
+
+/* SECTION LATEST BLOG */
+.latest-blog {
+}
+
+/* SECTION GET IN TOUCH */
+.contact {
+}
+
+/* FOOTER */
+footer {
+}

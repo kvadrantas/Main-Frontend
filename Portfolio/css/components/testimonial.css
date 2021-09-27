@@ -1,0 +1,265 @@
+#client {
+    margin: 50px 0;
+}
+
+.testimonial {border: 1px solid rgba(0, 0, 0, 0.6);
+    position: relative;
+    padding: 0 0;
+    background-image: url(../../img/client.jpeg);
+    background-color: #666666;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    text-align: center;
+}
+
+.overlay1 {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background: rgba(0, 0, 0, 0.6);
+    overflow: hidden;
+}
+
+.overlay2 {
+    position: relative;
+    display: inline-block;
+    width: 64%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.testimonial .content {
+    min-height: 290px;
+    width: 100%;
+    color: var(--third);
+    padding: 32px 0px;
+    background-color:  rgba(19, 19, 19, 0.6);
+}
+
+.testimonial .above-title {
+    padding-bottom: 100px;
+}
+
+.testimonial .title {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    color: var(--primary);
+    text-transform: uppercase;
+    font-size: .9rem;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 10px;
+}
+
+.testimonial-animation {
+    display: block;
+    height: 32px;
+    position: relative;
+}
+
+.testimonial-animation-paragraph {
+    display: block;
+    min-height: 90px;
+    position: relative;
+    overflow: hidden;
+}
+
+.testimonial .rating {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    color: #FFD600;
+    margin-bottom: 10px;
+    line-height: 1.85714286em;
+}
+
+.testimonial .content i {
+    
+
+}
+
+.testimonial .paragraph {
+    display: inline-block;
+    width: 100%;
+    padding-left: 64px;
+    padding-right: 64px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    color: #ccc;
+    padding-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    line-height: 1.85714286em;
+    font-weight: 400;
+    overflow-y: hidden;
+}
+
+.testimonial .title2 {
+    margin-top: 30px;
+    display: inline-block;
+    width: 100%;
+    padding-left: 64px;
+    padding-right: 64px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    font-size: .9rem;
+    color: var(--paragraph2);
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.testimonial .title3 {
+    margin-top: 25px;
+    display: inline-block;
+    width: 100%;
+    padding-left: 64px;
+    padding-right: 64px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    line-height: 1.2;
+    margin-bottom: 8px;
+    color: #ccc;
+}
+
+.testimonial-nav {
+    margin-top: 10px;
+}
+
+.testimonial .nav-line {
+    display: inline-block;
+    width: 15px;
+    height: 4px;
+    margin: 5px;
+    background-color: var(--paragraph2);
+    cursor: pointer;
+    border-radius: 8px;
+    margin-bottom: 100px;
+}
+
+.testimonial .clicked {
+    background-color: var(--primary);
+    width: 40px;
+}
+
+.content1 {
+    display: inline-block;
+    background: transparent;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 32%);
+    min-height: 290px;
+    width: 100%;
+    color: var(--third);
+    padding: 32px 0px;
+}
+
+.swipe1-left {
+    animation-name: swipe1-left;
+    animation-duration: .3s;
+}
+
+.swipe1-right {
+    animation-name: swipe1-right;
+    animation-duration: .3s;
+}
+
+.content2 {
+    background: transparent;
+    position: absolute;
+    top: 0;
+    transform: translate(-50%, 32%);
+    display: inline-block;
+    min-height: 290px;
+    width: 100%;
+    color: var(--third);
+    padding: 32px 0px;
+}
+
+.swipe2-left {
+    animation-name: swipe2-left;
+    animation-duration: .3s;
+}
+
+.swipe2-right {
+    animation-name: swipe2-right;
+    animation-duration: .3s;
+}
+
+
+/* SWIPE TO LEFT ANIMATION */
+@keyframes swipe1-left {
+    0% {
+
+
+    }
+    100% {
+        left: -70%;
+        
+    }
+}
+
+@keyframes swipe2-left {
+    0% {
+
+
+    }
+    100% {
+        left: 50%;
+        
+    }
+}
+
+/* SWIPE TO RIGHT ANIMATION */
+@keyframes swipe1-right {
+    0% {
+
+
+    }
+    100% {
+        left: 170%;
+        
+    }
+}
+
+@keyframes swipe2-right {
+    0% {
+
+
+    }
+    100% {
+        left: 50%;
+        
+    }
+}
+
+@media (max-width: 1220px) {
+    .overlay2 {
+        width: 80%;
+    }
+}
+
+@media (max-width: 575px) {
+    .overlay2 {
+        width: 95%;
+        
+    }
+
+    .testimonial .paragraph {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
